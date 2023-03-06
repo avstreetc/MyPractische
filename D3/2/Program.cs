@@ -29,7 +29,7 @@ namespace z4
             for (double i = a; i <= b; i += h)
             {
                 f(i, out double y);
-                Console.WriteLine($"f({i})={y}");
+                Console.WriteLine($"f({i})={y};");
             }
         }
 

@@ -18,7 +18,7 @@ namespace z1lab4a1
             int z = f(a) + f(b); //- f(c);
 
             // 2+2-3 = 1
-            Console.WriteLine("Результат Z = " + z);
+            Console.WriteLine("Результат z = " + z);
         }
 
         static int f(int x)

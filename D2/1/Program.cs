@@ -38,8 +38,9 @@ class a1
 
         // вызываем эти приколдесы
         double exprValue = obj.ExpressionValue();
-        Console.WriteLine($"Значение выражения ((-b+(1/a))/3) равно {exprValue}.");
+        Console.WriteLine($"Значение выражения равно {exprValue}.");
 
+        // 2+3=5 * 5 * 5 = 125
         int cubedSum = obj.SumCubed();
         Console.WriteLine($"Куб суммы a и b равен {cubedSum}.");
     }
