@@ -1,40 +1,51 @@
 ﻿using System;
-using System.Linq.Expressions;
 
-class OutOfRangeException : Exception
+class a2
 {
-    public OutOfRangeException(string message) : base(message) { }
-}
-
-class Program
-{
-    static void Main(string[] args)
+    static void Main()
     {
         try
         {
-            Console.WriteLine("Введите значение x:");
+            Console.Write("Введите вещественное число x: ");
             double x = double.Parse(Console.ReadLine());
 
-            double result;
-            if (x >= 1)
-            {
-                result = 5 * x + 2;
-                Console.WriteLine($"Результат: {result}");
-            }
-            else if (x > -1 && x < 1)
-            {
-                // Проверка условий выхода за диапазон
-                if (x == 0)
-                {
-                    throw new DivideByZeroException("Знаменатель равен нулю.");
-                }
+            double f;
 
-                double numerator = Math.Cos(x); //по приколу нужно соединить
-                result = numerator / x;
-                Console.WriteLine($"Результат: {result}");
+            if (x<-1)
+            {
+                throw new Exception("x должно быть больше или равно -1.");
             }
-# Catch;
+            else if (x == 0)
+            {
+                throw new DivideByZeroException("Деление на ноль.");
+            }
+            else if (x >= 1)
+            {
+                f = 5 * x + 2;
+            }
+            else
+            {
+                f = Math.Cos(x) / x;
+            }
+            //else
+            //{
+            //    throw new Exception("x должно быть меньше 1.");
+            //}
 
+            Console.WriteLine("f = " + f);
+        }
+
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine("Ошибка: " + ex.Message);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Ошибка: введено некорректное значение.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Ошибка: " + ex.Message);
         }
     }
 }
