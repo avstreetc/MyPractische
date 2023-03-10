@@ -4,8 +4,9 @@ class a4
 {
     static void Main(string[] args)
     {
+        //Александр Сергеевич Пушкин 9
         Console.WriteLine("Введите ФИО");
-        string fullName = Console.ReadLine(); ;
+        string fullName = Console.ReadLine(); 
         fullName = fullName.Replace(" ", ""); //уберём пробелы к чёрту
 
         int sum = 0;
