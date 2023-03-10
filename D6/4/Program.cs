@@ -12,18 +12,18 @@ class a4
         int sum = 0;
         foreach (char c in fullName)
         {
-            sum += char.ToUpper(c) - 64; //ибо А 65
+            sum += char.ToUpper(c) - 64;
         }
 
         while (sum > 9)
         {
             int newSum = 0;
-            while (sum!= 0)
+            while (sum != 0)
             {
                 newSum += sum % 10;
                 sum /= 10;
             }
-        sum = newSum;
+            sum = newSum;
         }
         Console.WriteLine("Код личности: " + sum);
     }
