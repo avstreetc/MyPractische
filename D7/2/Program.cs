@@ -17,7 +17,7 @@ int matchEngCount = matchesEng.Count;
 int matchRusCount = matchesRus.Count;
 
 
-if (Regex.IsMatch(text, @"\p{IsBasicLatin}"))
+if (reg.IsMatch(text, @"\p{IsBasicLatin}"))
 {
     Console.WriteLine("Text is in English");
 }
