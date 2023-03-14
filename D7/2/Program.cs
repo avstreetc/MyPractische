@@ -5,23 +5,14 @@ Console.WriteLine("Введите текст, а мы определим, на �
 string text = Console.ReadLine();
 
 //шаблон-экзмепляр регулярного выражения
-Regex regRus = new Regex("[а-яА-Я]");
-Regex reg = new Regex("[a-zA-Z]");
+Regex regex = new Regex("[^a-zA-Z]");
+string cleanText = regex.Replace(text, "");
 
-// рег для поиска англ в тексте
-MatchCollection matchesEng = reg.Matches(text);
-MatchCollection matchesRus = regRus.Matches(text);
-
-// счёт символов англ и рашн
-int matchEngCount = matchesEng.Count;
-int matchRusCount = matchesRus.Count;
-
-
-if (reg.IsMatch(text, @"\p{IsBasicLatin}"))
+if (!Regex.IsMatch(cleanText, @"^[a-zA-Z]+$"))
 {
-    Console.WriteLine("Text is in English");
+    Console.WriteLine("Введенный текст не является на английском языке");
 }
 else
 {
-    Console.WriteLine("Текст на русском");
+    Console.WriteLine("Введенный текст является на английском языке");
 }
