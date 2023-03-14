@@ -1,30 +1,40 @@
-﻿using System;
-
-class a4
-{
-    static void Main(string[] args)
-    {
-        //Александр Сергеевич Пушкин 9
-        Console.WriteLine("Введите ФИО");
-        string fullName = Console.ReadLine(); 
-        fullName = fullName.Replace(" ", ""); //уберём пробелы к чёрту
-
-        int sum = 0;
-        foreach (char c in fullName)
-        {
-            sum += char.ToUpper(c) - 64;
-        }
-
-        while (sum > 9)
-        {
-            int newSum = 0;
-            while (sum != 0)
-            {
-                newSum += sum % 10;
-                sum /= 10;
-            }
-            sum = newSum;
-        }
-        Console.WriteLine("Код личности: " + sum);
+﻿const string Abc = @"абвгдеёжхийклмнопрстуфхцчшщъыьэюя";
+Console.Write("Введите ФИО: ");
+string[] fullName = Console.ReadLine().Split(' ');
+int num = 0;
+    foreach (string word in fullName)
+    {   
+        num += SumIndexInStr(word);
     }
-}
+    int code = ToDetermineCodeNumber(num);
+    Console.WriteLine($"{code}");
+
+    int SumIndexInStr(string str)
+    {
+        int num = 0;
+        string strLower = str.ToLower();
+        for (int i = 0; i < strLower.Length; i++)
+        {
+          num += Abc.IndexOf(strLower[i]) + 1;
+
+        }
+        return num;
+    }
+
+    int ToDetermineCodeNumber(int num)
+    {
+        int code = 0;
+        while (num != 0)
+        {
+            code += num % 10;
+            num /= 10;
+            if (code > 9 && num == 0)
+            {
+                num = code;
+                code = 0;
+            }
+        }
+
+        return code;
+    }
+
