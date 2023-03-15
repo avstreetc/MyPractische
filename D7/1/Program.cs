@@ -6,8 +6,6 @@ string text = Console.ReadLine();
 // Создаем регулярное выражение, которое находит слова, содержащие не более одного дефиса
 Regex regex = new Regex(@"\b\w*-\w*\b");
 
-
-
 Console.WriteLine();
 Console.WriteLine("Слова содержащие не более одного дефиса: ");
 

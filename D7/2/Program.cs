@@ -10,9 +10,9 @@ string cleanText = regex.Replace(text, "");
 
 if (!Regex.IsMatch(cleanText, @"^[a-zA-Z]+$"))
 {
-    Console.WriteLine("Введенный текст не является на английском языке");
+    Console.WriteLine("Введенный текст не на английском языке");
 }
 else
 {
-    Console.WriteLine("Введенный текст является на английском языке");
+    Console.WriteLine("Введенный текст на английском языке");
 }
