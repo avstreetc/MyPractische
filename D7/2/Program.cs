@@ -4,7 +4,7 @@
 Console.WriteLine("Введите текст, а мы определим, на английском ли он: ");
 string text = Console.ReadLine();
 
-//шаблон-экзмепляр регулярного выражения
+//регулярное выражения
 Regex regex = new Regex("[^a-zA-Z]");
 string cleanText = regex.Replace(text, "");
 
