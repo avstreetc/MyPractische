@@ -1,47 +1,47 @@
 ﻿using System;
 using System.Text;
 
-enum Post
-{
-    Фотограф = 10,
-    Программист = 15,
-    Дизайнер = 20,
-    Рабочий = 50
+//enum Post
+//{
+//    Фотограф = 10,
+//    Программист = 15,
+//    Дизайнер = 20,
+//    Рабочий = 50
 
-}
+//}
 
 
 // Worker содержит ФИ работника, название должн и год пост на работу
 struct WORKER
 {
     public string Name; //Фамилия работника
-    public Post post; // Позиция должности
+    public string post; // Позиция должности
     public int YearOfEmployment; //Год работы
-    public int BonusTime; //дополнительные часы в месяц
+    //public int BonusTime; //дополнительные часы в месяц
 }
 // логика на выполнение бонус зарплаты
-class Accountant
-{
-    public bool AskForBonus(WORKER worker, int hours)
-    {
+//class Accountant
+//{
+//    public bool AskForBonus(WORKER worker, int hours)
+//    {
 
-        if (hours > worker.BonusTime)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-}
+//        if (hours > worker.BonusTime)
+//        {
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        }
+//    }
+//}
 
 
 class Program
 {
     static void Main(string[] args)
     {
-        const int NUM_WORKERS = 1; //количество работников
+        const int NUM_WORKERS = 3; //количество работников
         WORKER[] workers = new WORKER[NUM_WORKERS]; //массив работников
 
         // Ввод данных для каждого сотрудника
@@ -51,17 +51,18 @@ class Program
             Console.Write("Фамилия Имя: ");
             workers[i].Name = Console.ReadLine();  //Идёт в имя
             Console.Write("Должность: ");
-            foreach (Post post in Enum.GetValues(typeof(Post)))
-            {
-                Console.Write("{0}, ", post);
-            }
-            Console.WriteLine("):");
-            workers[i].post = (Post)Enum.Parse(typeof(Post), Console.ReadLine());
+            workers[i].post = Console.ReadLine();
+            //foreach (Post post in Enum.GetValues(typeof(Post)))
+            //{
+            //    Console.Write("{0}, ", post);
+            //}
+            //Console.WriteLine("):");
+            //workers[i].post = (Post)Enum.Parse(typeof(Post), Console.ReadLine());
             Console.Write("Год поступления на работу: ");
             workers[i].YearOfEmployment = int.Parse(Console.ReadLine()); // Идёт в Год Работы
-            //второе задание          
-            Console.Write("Дополнительные часы работы в месяц: ");
-            workers[i].BonusTime = int.Parse(Console.ReadLine()); //Идёт в бонус
+            ////второе задание          
+            //Console.Write("Дополнительные часы работы в месяц: ");
+            //workers[i].BonusTime = int.Parse(Console.ReadLine()); //Идёт в бонус
             Console.WriteLine(); //для красоты пустое пространство
         }
 
@@ -99,17 +100,17 @@ class Program
             Console.WriteLine("Нет работников со стажем больше, чем " + minYears + " лет.");
         }
 
-        Accountant accountant = new Accountant();
-        Console.WriteLine(); //для красоты пустое пространство
-        Console.Write("Введите от скольких бонусных часов в месяц назначать премию: ");
-        int hour = int.Parse(Console.ReadLine()); //ввод числа от скольких назначать бонус
+        //Accountant accountant = new Accountant();
+        //Console.WriteLine(); //для красоты пустое пространство
+        //Console.Write("Введите от скольких бонусных часов в месяц назначать премию: ");
+        //int hour = int.Parse(Console.ReadLine()); //ввод числа от скольких назначать бонус
 
-        for (int i = 0; i < workers.Length; i++)
-        {
-            if (accountant.AskForBonus(workers[i].post, hour))  //поменять количество времени
-            {
-                Console.WriteLine(workers[i].Name + " заслуживает примею.");
-            }
-        }
+        //for (int i = 0; i < workers.Length; i++)
+        //{
+        //    if (accountant.AskForBonus(workers[i].post, hour))  //поменять количество времени
+        //    {
+        //        Console.WriteLine(workers[i].Name + " заслуживает примею.");
+        //    }
+        //}
     }
 }
