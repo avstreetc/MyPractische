@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _3.Interfac;
 
 namespace _3.Docum
 {
-    internal class Photograph
+    internal class Photographer 
     {
         delegate void UpdatePhotograph(Photo photo);
         event UpdatePhotograph? ub;
@@ -15,7 +11,7 @@ namespace _3.Docum
 
         public string Name { get => _name; }
 
-        public Photograph(string name)
+        public Photographer(string name)
         {
             _name = name;
         }
@@ -37,7 +33,7 @@ namespace _3.Docum
             ub?.Invoke(photo);
         }
 
-        public void CreateNewVideo(string namePhoto)
+        public void CreateNewPhoto(string namePhoto)
         {
             Photo photo = new Photo()
             {

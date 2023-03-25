@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using _3.Interfac;
 
 namespace _3.Docum
 {
-    internal class Moder : IObserver
+    internal class Moderator : IObserver
     {
         private string _id;
 
@@ -26,3 +23,4 @@ namespace _3.Docum
                 $"от фотографа {photo.Author.Name}");
         }
     }
+}

@@ -1,16 +1,15 @@
-﻿using System;
+﻿using _3.Docum;
 
-Photograph photograph = new photograph("Avstreetc");
+Photographer photographer = new Photographer("Avstreetc");
 
 Subscriber subscriber = new Subscriber("Steve");
 Moderator moderator = new Moderator("1234");
 
+photographer.Attach(subscriber);
+photographer.Attach(moderator);
 
-Photograph.Attach(subscriber);
-Photograph.Attach(moderator);
+photographer.CreateNewPhoto("Сделаю ваш момент в фотографии");
 
-Photograph.CreateNewVideo("Сделаю ваш момент в фотографии");
+photographer.Detach(subscriber);
 
-Photograph.Detach(subscriber);
-
-Photograph.CreateNew("Фотографирую");
+photographer.CreateNewPhoto("Фотографирую");
