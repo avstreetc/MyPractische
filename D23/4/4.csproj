@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3368A0C3-7E8B-4568-9179-FF42A89A163A}</ProjectGuid>
+    <ProjectGuid>{6725C34C-546D-4257-AEF8-C39E37543EFE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>z2</RootNamespace>
-    <AssemblyName>z2</AssemblyName>
+    <RootNamespace>z4</RootNamespace>
+    <AssemblyName>z4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
