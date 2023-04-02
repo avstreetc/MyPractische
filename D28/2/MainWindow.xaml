@@ -1,0 +1,22 @@
+﻿<Window x:Class="_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2"
+        mc:Ignorable="d"
+        Title="1 Задание" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="93*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="200" Height="200" Grid.Column="1" Margin="244,117,300,117">
+
+            <Ellipse Stroke="Black" StrokeThickness="2" Width="200" Height="200" />
+            <Ellipse Stroke="Black" Width="150" Height="150" Canvas.Left="25" Canvas.Top="25" />
+            <Ellipse Stroke="Black" Width="90" Height="90" Canvas.Left="55" Canvas.Top="55" RenderTransformOrigin="0.304,0.319" />
+        </Canvas>
+
+    </Grid>
+</Window>

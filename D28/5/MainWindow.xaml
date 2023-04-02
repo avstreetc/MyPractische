@@ -1,0 +1,46 @@
+﻿<Window x:Class="_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Width="100" Height="100" Margin="171,175,529,159"
+                Content="▲"
+                FontSize="50"
+                FontFamily="Segoe UI Symbol"
+                FontWeight="Bold"
+                BorderThickness="0"
+                BorderBrush="Black"
+                Background="White" RenderTransformOrigin="0.622,0.748"/>
+        <Button Width="100" Height="100" Margin="544,175,0,0"
+                Content="●"
+                FontSize="50"
+                FontFamily="Segoe UI Symbol"
+                FontWeight="Bold"
+                BorderThickness="0"
+                BorderBrush="Black"
+                Background="White"
+                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Width="100" Height="100" Margin="365,167,335,167"
+                Content="◢"
+                FontSize="50"
+                FontFamily="Segoe UI Symbol"
+                FontWeight="Bold"
+                BorderThickness="0"
+                BorderBrush="Black"
+                Background="White">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Polygon Points="0,0 100,0 100,100 0,100" Fill="{TemplateBinding Background}"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Window>

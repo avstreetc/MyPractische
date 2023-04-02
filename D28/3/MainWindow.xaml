@@ -1,0 +1,19 @@
+﻿<Window x:Class="_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3"
+        mc:Ignorable="d"
+        Title="3 Задание" Height="450" Width="800">
+    <Grid>
+        <Canvas Width="200" Height="200" Margin="320,25,280,209">
+            <Rectangle Stroke="Black" Width="50" Height="100" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Rectangle Stroke="Black" Width="50" Height="100" Canvas.Left="25" Canvas.Top="68" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Rectangle Stroke="Black" Width="50" Height="100" Canvas.Left="50" Canvas.Top="135" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Rectangle Stroke="Black" Width="50" Height="100" Canvas.Left="100" Canvas.Top="265" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Rectangle Stroke="Black" Width="50" Height="100" Canvas.Left="75" Canvas.Top="201" HorizontalAlignment="Left" VerticalAlignment="Top" RadiusX="0" RadiusY="0" />
+        </Canvas>
+
+    </Grid>
+</Window>
