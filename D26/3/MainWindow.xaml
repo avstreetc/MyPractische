@@ -1,0 +1,18 @@
+﻿<Window x:Class="LibraryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Автовокзал" Height="349" Width="678">
+    <Grid>
+        <ListBox Name="booksList">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Title}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Path=Author}" />
+                        <TextBlock Text="{Binding Path=Year}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

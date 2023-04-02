@@ -1,0 +1,46 @@
+﻿<Window x:Class="zd1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zd1"
+        mc:Ignorable="d"
+        Title="Автовокзал" Height="550" Width="900">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.062"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name ="ButtonOpen" Content="Открыть" HorizontalAlignment="Left" Margin="727,26,0,0" VerticalAlignment="Top" Height="20" Width="150" Click="ButtonOpen_Click"/>
+        <Button Click ="ButtonExit_Click" x:Name ="ButtonExit" Content="Выход" HorizontalAlignment="Left" Margin="732,482,0,0" VerticalAlignment="Top" Width="157"/>
+        <Button Click ="ButtonAdd_Click" x:Name ="ButtonAdd" Content="Добавить" HorizontalAlignment="Left" Margin="27,449,0,0" VerticalAlignment="Top" Width="232"/>
+        <TextBlock x:Name ="TextBlockXmlFilePath" HorizontalAlignment="Left" Margin="15,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="654" Height="28"/>
+        <TextBox x:Name ="TextBlockXmlFileContent" HorizontalAlignment="Left" Margin="17,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="669" Height="356"/>
+        <StackPanel Margin="725,51,15,0">
+            <Expander Header="Функциональность">
+                <StackPanel>
+                    <Label>Найти</Label>
+                    <TextBox x:Name ="textBoxSearch" Height="52" TextChanged="textBoxSearch_TextChanged_1"></TextBox>
+                    <Button x:Name ="ButtonSearch" Click="ButtonSearch_Click" Height="28">Найти</Button>
+                    <Label>Удаление</Label>
+                    <TextBox x:Name="textBoxDelete" Height="52"></TextBox>
+                    <Button x:Name="ButtonDelete" Click="ButtonDelete_Click" Height="28">Удалить</Button>
+                </StackPanel>
+            </Expander>
+            <Expander Header="Вид">
+                <StackPanel>
+                    <RadioButton x:Name="radioButtonTextBox" Checked="radioButtonTextBox_Checked">TextBox</RadioButton>
+                    <RadioButton x:Name="radioButtonTreeView" Checked="radioButtonTreeView_Checked">TreeView</RadioButton>
+                    <RadioButton x:Name="radioButtonListBox" Checked="radioButtonListBox_Checked">ListBox</RadioButton>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+        <ListBox x:Name="ListBoxXmlFileContainer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="17,60,218,121"/>
+        <TreeView x:Name="TreeViewXmlFileContent" Margin="18,60,215,123"/>
+
+    </Grid>
+</Window>
